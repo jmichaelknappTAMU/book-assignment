@@ -3,6 +3,15 @@
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
+	<br>
+	<strong>Author:</strong>
+	<%= @book.author %>
+	<br>
+	<strong>Price:</strong>
+	$<%= sprintf('%04.2f', @book.price) %>
+	<br>
+	<strong>Publish Date:</strong>
+	<%= @book.publishDate %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
