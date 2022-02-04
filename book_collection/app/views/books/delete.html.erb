@@ -1,0 +1,16 @@
+<h1> Deleting Book </h1>
+<%= form_for(@book, method: 'delete') do |form| %>
+	<p><b>Are you sure you want to permanantly delete the following book?</b></p>
+	
+	<strong>Title:</strong>
+	<%= @book.title %>
+	<br>
+	<strong>Author:</strong>
+	<%= @book.author %>
+	
+	<br>
+	<%= form.submit("Delete Book") %>
+<% end %>
+<br>
+<%= link_to 'Show', @book %> |
+<%= link_to 'Back', books_path %>
