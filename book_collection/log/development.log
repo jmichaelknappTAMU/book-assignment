@@ -5603,3 +5603,17 @@ Processing by BooksController#new as HTML
 Completed 200 OK in 194ms (Views: 182.2ms | ActiveRecord: 0.0ms | Allocations: 10616)
 
 
+Started GET "/books" for 172.17.0.1 at 2022-02-04 05:46:32 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:14
+  Rendered books/index.html.erb within layouts/application (Duration: 309.7ms | Allocations: 6490)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 621.1ms | Allocations: 12965)
+Completed 200 OK in 700ms (Views: 347.7ms | ActiveRecord: 295.2ms | Allocations: 17389)
+
+
