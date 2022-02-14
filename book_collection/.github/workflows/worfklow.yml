@@ -30,6 +30,8 @@ jobs:
         run: |
           gem install bundler
           bundler install
+          gem install brakeman
+          gem install rubocop
       - name: Create database
         run: |
           bundler exec rails db:create RAILS_ENV=test
