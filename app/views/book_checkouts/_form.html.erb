@@ -1,0 +1,35 @@
+<%= form_with(model: book_checkout) do |form| %>
+  <% if book_checkout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(book_checkout.errors.count, "error") %> prohibited this book_checkout from being saved:</h2>
+
+      <ul>
+        <% book_checkout.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+		<% uids = [] %>
+		<% @users.each do |u| %>
+			<% uids = uids << u.id %>
+		<% end %>
+    <%= form.label :user_id %>
+    <%= form.select :user_id, uids %>
+  </div>
+
+  <div class="field">
+		<% bids = [] %>
+		<% @books.each do |b| %>
+			<% bids = bids << b.id %>
+		<% end %>
+    <%= form.label :book_id %>
+    <%= form.select :book_id, bids %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

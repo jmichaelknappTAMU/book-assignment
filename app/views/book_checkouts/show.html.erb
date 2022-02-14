@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @book_checkout.user_id %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @book_checkout.book_id %>
+</p>
+
+<%= link_to 'Edit', edit_book_checkout_path(@book_checkout) %> |
+<%= link_to 'Back', book_checkouts_path %>
